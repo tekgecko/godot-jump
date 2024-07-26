@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4jka6llsgbyn"
+path="res://.godot/imported/monster-crash-arcade.mp3-a15bbfe4ec6b2de32450b3b286df89e8.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/monster-crash-arcade.mp3"
+dest_files=["res://.godot/imported/monster-crash-arcade.mp3-a15bbfe4ec6b2de32450b3b286df89e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

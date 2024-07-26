@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cid1r0rtj7ei5"
+path="res://.godot/imported/skull_shoot2.mp3-3c21b5c6111c7d7594120bd1095aa538.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/skull_shoot2.mp3"
+dest_files=["res://.godot/imported/skull_shoot2.mp3-3c21b5c6111c7d7594120bd1095aa538.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

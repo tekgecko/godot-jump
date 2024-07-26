@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://od7ekoaxugsw"
+path="res://.godot/imported/trampoline-arcade.mp3-88b3a3551f7acbae7475d9402cf77179.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/trampoline-arcade.mp3"
+dest_files=["res://.godot/imported/trampoline-arcade.mp3-88b3a3551f7acbae7475d9402cf77179.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

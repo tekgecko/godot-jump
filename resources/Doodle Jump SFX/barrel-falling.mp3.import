@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfyqbi6x1t85"
+path="res://.godot/imported/barrel-falling.mp3-796035dd9ee02220fd3032fe44b2a1e8.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/barrel-falling.mp3"
+dest_files=["res://.godot/imported/barrel-falling.mp3-796035dd9ee02220fd3032fe44b2a1e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

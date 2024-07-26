@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkmwrvqn583g1"
+path="res://.godot/imported/soccer-monster-hit.mp3-69dcc5ca5632ec6d6378202d90836e14.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/soccer-monster-hit.mp3"
+dest_files=["res://.godot/imported/soccer-monster-hit.mp3-69dcc5ca5632ec6d6378202d90836e14.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

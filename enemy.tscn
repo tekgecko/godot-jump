@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://dfcsca15tc0qq"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_3j5c2"]
+[ext_resource type="Texture2D" uid="uid://dh32rsvy0bbgc" path="res://resources/Mobile - Doodle Jump - General Sprites/enemy1.png" id="1_jauwr"]
+[ext_resource type="AudioStream" uid="uid://bhe88ivj88pg2" path="res://resources/Doodle Jump SFX/monster-crash.mp3" id="3_y268s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m6au"]
+atlas = ExtResource("1_jauwr")
+region = Rect2(0, 0, 163, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgsfi"]
+atlas = ExtResource("1_jauwr")
+region = Rect2(163, 0, 163, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ughgi"]
+atlas = ExtResource("1_jauwr")
+region = Rect2(326, 0, 163, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_744sg"]
+atlas = ExtResource("1_jauwr")
+region = Rect2(489, 0, 163, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sefp1"]
+atlas = ExtResource("1_jauwr")
+region = Rect2(652, 0, 163, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kh67v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m6au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgsfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ughgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_744sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sefp1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s88wm"]
+size = Vector2(145, 75.5)
+
+[node name="Enemy" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_3j5c2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kh67v")
+autoplay = "default"
+frame_progress = 0.0144443
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -5)
+shape = SubResource("RectangleShape2D_s88wm")
+
+[node name="MonHitAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_y268s")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

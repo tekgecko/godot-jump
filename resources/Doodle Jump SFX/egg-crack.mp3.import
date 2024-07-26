@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brkofruqkdgym"
+path="res://.godot/imported/egg-crack.mp3-23d3c1d851876b95e32974e5cf035892.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/egg-crack.mp3"
+dest_files=["res://.godot/imported/egg-crack.mp3-23d3c1d851876b95e32974e5cf035892.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

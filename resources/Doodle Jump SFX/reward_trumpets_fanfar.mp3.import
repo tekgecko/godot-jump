@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d30qwda8dffmu"
+path="res://.godot/imported/reward_trumpets_fanfar.mp3-219e2d835919a2d99afc3bb93938595d.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/reward_trumpets_fanfar.mp3"
+dest_files=["res://.godot/imported/reward_trumpets_fanfar.mp3-219e2d835919a2d99afc3bb93938595d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

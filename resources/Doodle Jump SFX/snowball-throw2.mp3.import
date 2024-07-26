@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnaxfciwcpct"
+path="res://.godot/imported/snowball-throw2.mp3-c23c71399eb33b1f76bfb191ebf14c2f.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/snowball-throw2.mp3"
+dest_files=["res://.godot/imported/snowball-throw2.mp3-c23c71399eb33b1f76bfb191ebf14c2f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

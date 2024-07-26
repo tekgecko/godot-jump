@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://caq4rjtgvhdi1"
+path="res://.godot/imported/underwater-shoot.mp3-2ea8456c72bbc7499714f5889252f917.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/underwater-shoot.mp3"
+dest_files=["res://.godot/imported/underwater-shoot.mp3-2ea8456c72bbc7499714f5889252f917.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

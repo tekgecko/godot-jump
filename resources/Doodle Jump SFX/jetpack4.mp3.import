@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ikho8ygqsijp"
+path="res://.godot/imported/jetpack4.mp3-90c32c3f2c3a138a48833399059cc273.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/jetpack4.mp3"
+dest_files=["res://.godot/imported/jetpack4.mp3-90c32c3f2c3a138a48833399059cc273.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

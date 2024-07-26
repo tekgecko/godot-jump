@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sw34aiau3hng"
+path="res://.godot/imported/match-reward-sound.mp3-47f37756535f5c7fe5b1d9b1671e371d.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/match-reward-sound.mp3"
+dest_files=["res://.godot/imported/match-reward-sound.mp3-47f37756535f5c7fe5b1d9b1671e371d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdhqceri3v80a"
+path="res://.godot/imported/monsterpogodak.mp3-2da9a74996e235bb1b9b63ee7adc9486.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/monsterpogodak.mp3"
+dest_files=["res://.godot/imported/monsterpogodak.mp3-2da9a74996e235bb1b9b63ee7adc9486.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

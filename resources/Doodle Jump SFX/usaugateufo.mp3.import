@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bf7ybfcmb4pq7"
+path="res://.godot/imported/usaugateufo.mp3-7e03a9e774133854f9f9e19188f98353.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/usaugateufo.mp3"
+dest_files=["res://.godot/imported/usaugateufo.mp3-7e03a9e774133854f9f9e19188f98353.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

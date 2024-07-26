@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ewok6tm18aam"
+path="res://.godot/imported/trampoline.mp3-92f1efe24818bfc607cd6dbdf5ac9000.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/trampoline.mp3"
+dest_files=["res://.godot/imported/trampoline.mp3-92f1efe24818bfc607cd6dbdf5ac9000.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

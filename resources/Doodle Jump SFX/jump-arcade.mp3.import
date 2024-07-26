@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://57ersb5dmpen"
+path="res://.godot/imported/jump-arcade.mp3-9c63b7d37ea43498da7358e0a3c066ca.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/jump-arcade.mp3"
+dest_files=["res://.godot/imported/jump-arcade.mp3-9c63b7d37ea43498da7358e0a3c066ca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://h0u548s3l8oa"
+path="res://.godot/imported/reward_spin_loop.mp3-8b8e6b62437fb0c08de964d6b802b1c5.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/reward_spin_loop.mp3"
+dest_files=["res://.godot/imported/reward_spin_loop.mp3-8b8e6b62437fb0c08de964d6b802b1c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

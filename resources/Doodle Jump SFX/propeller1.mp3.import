@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drmginjhmen61"
+path="res://.godot/imported/propeller1.mp3-2bc5eeac009f46df949e1bc757480a51.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/propeller1.mp3"
+dest_files=["res://.godot/imported/propeller1.mp3-2bc5eeac009f46df949e1bc757480a51.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

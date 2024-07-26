@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfv3yij828idx"
+path="res://.godot/imported/wing-flap.mp3-22b7c19b382fde123580d5f4100fdbac.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/wing-flap.mp3"
+dest_files=["res://.godot/imported/wing-flap.mp3-22b7c19b382fde123580d5f4100fdbac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

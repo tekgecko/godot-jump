@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8ye2ynwksl51"
+path="res://.godot/imported/pirate_explosion.mp3-ab420b81fa1f1fb848376266a4e46888.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/pirate_explosion.mp3"
+dest_files=["res://.godot/imported/pirate_explosion.mp3-ab420b81fa1f1fb848376266a4e46888.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

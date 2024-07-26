@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boiuff0ftw5oe"
+path="res://.godot/imported/pucanje.mp3-c52fe122614282e31c8c13de9b74da9c.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/pucanje.mp3"
+dest_files=["res://.godot/imported/pucanje.mp3-c52fe122614282e31c8c13de9b74da9c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

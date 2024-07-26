@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3b70j1vpy848"
+path="res://.godot/imported/sabre_throw.mp3-449841df5ef853a14132a408f5ec70e7.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/sabre_throw.mp3"
+dest_files=["res://.godot/imported/sabre_throw.mp3-449841df5ef853a14132a408f5ec70e7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

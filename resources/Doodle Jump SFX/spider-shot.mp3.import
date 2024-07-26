@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://busfcc20r8ckc"
+path="res://.godot/imported/spider-shot.mp3-e48cb309ee78a1085edfe9ef2745b548.mp3str"
+
+[deps]
+
+source_file="res://resources/Doodle Jump SFX/spider-shot.mp3"
+dest_files=["res://.godot/imported/spider-shot.mp3-e48cb309ee78a1085edfe9ef2745b548.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
