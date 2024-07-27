@@ -1,13 +1,11 @@
 extends Camera2D
 @export var player_path: NodePath
 @onready var player = get_node(player_path)
-@onready var CAMERA_OFFSET = -600
+const CAMERA_OFFSET = 400
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	# TODO: Get the players last frame and move back
 	offset.y = player.position.y + CAMERA_OFFSET
+
+func _on_player_jumped():
+	var player_pos = round(abs(player.position.y))/100
