@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfcsca15tc0qq"]
+[gd_scene load_steps=12 format=3 uid="uid://dfcsca15tc0qq"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_3j5c2"]
 [ext_resource type="Texture2D" uid="uid://dh32rsvy0bbgc" path="res://resources/Mobile - Doodle Jump - General Sprites/enemy1.png" id="1_jauwr"]
@@ -48,7 +48,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s88wm"]
-size = Vector2(145, 75.5)
+size = Vector2(145, 61.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xm7jg"]
+size = Vector2(145, 20)
 
 [node name="Enemy" type="Area2D"]
 collision_layer = 2
@@ -60,10 +63,18 @@ autoplay = "default"
 frame_progress = 0.776593
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -5)
+position = Vector2(2, 5.875)
 shape = SubResource("RectangleShape2D_s88wm")
 
 [node name="MonHitAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_y268s")
+
+[node name="EnemyJump" type="StaticBody2D" parent="."]
+editor_description = "Allows player to jump on enemy head
+"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyJump"]
+position = Vector2(2.5, -36)
+shape = SubResource("RectangleShape2D_xm7jg")
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

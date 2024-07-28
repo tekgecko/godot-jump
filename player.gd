@@ -14,6 +14,7 @@ signal jumped
 @onready var alive = true
 @onready var DEATH_SPEED = 800
 @onready var col_shape = $CollisionShape2D
+@onready var projectile = preload("res://projectile.tscn")
 
 const DEATH_HEIGHT = 500
 
@@ -54,8 +55,10 @@ func controls():
 		sprite.flip_h = false
 	if Input.is_action_just_released("left") or Input.is_action_just_released("right"):
 		motion.x = 0
-	if Input.is_action_just_pressed("fire"):
-		fire()
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+	if Input.is_action_just_released("shoot"):
+		pass
 	
 
 func apply_gravity():
@@ -66,7 +69,11 @@ func die():
 	if !fall_audio.playing:
 		fall_audio.play()
 		
-func fire():
+func shoot():
+	var bullet = projectile.instantiate()
+	get_tree().root.get_child(0).add_child(bullet)
+	bullet.position = position
+	sprite.play("shoot")
 	shoot_audio.play()
 
 	

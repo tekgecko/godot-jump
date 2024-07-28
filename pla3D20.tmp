@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmi86igu5nija"]
+[gd_scene load_steps=9 format=3 uid="uid://bmi86igu5nija"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_cdj37"]
 [ext_resource type="Texture2D" uid="uid://bk25ig5qyww48" path="res://resources/Mobile - Doodle Jump - General Sprites/lik-right@2x.png" id="1_dmppp"]
 [ext_resource type="Texture2D" uid="uid://m2y8x8tuy8au" path="res://resources/Mobile - Doodle Jump - General Sprites/lik-right-odskok@2x.png" id="3_r50py"]
 [ext_resource type="AudioStream" uid="uid://dj5aipxjdrdwp" path="res://resources/Doodle Jump SFX/jump.wav" id="4_p48vx"]
-[ext_resource type="Texture2D" uid="uid://c2eawrrxh10yc" path="res://resources/Mobile - Doodle Jump - General Sprites/shoot.png" id="4_sjsc3"]
 [ext_resource type="AudioStream" uid="uid://dkatgupn7yvlj" path="res://resources/Doodle Jump SFX/pada.mp3" id="5_g1480"]
 [ext_resource type="AudioStream" uid="uid://bubifgdnocl4o" path="res://resources/Doodle Jump SFX/laser1.mp3" id="6_eral3"]
 
@@ -20,14 +19,6 @@ animations = [{
 "loop": false,
 "name": &"jump",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_sjsc3")
-}],
-"loop": true,
-"name": &"shoot",
-"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rp3o4"]
@@ -38,9 +29,8 @@ collision_mask = 3
 script = ExtResource("1_cdj37")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_n0tnq")
-animation = &"shoot"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 23)
