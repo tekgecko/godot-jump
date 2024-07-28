@@ -11,8 +11,14 @@ func _ready():
 func _process(delta):
 	pass
 
-
 # If a physics body in the player group intersects, call tje die method on that object.
 func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	get_tree().call_group("player", "die")
-	mon_hit_audio.play()
+	print("Entered")
+	if body.is_in_group("player"):
+		get_tree().call_group("player", "die")
+		mon_hit_audio.play()
+	elif body.is_in_group("projectile"):
+		print("Emeny has been hit")
+		queue_free()
+
+

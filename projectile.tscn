@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://projectile.gd" id="1_t7fas"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f0um8"]
-radius = 8.0
+radius = 13.0
 
 [node name="Projectile" type="StaticBody2D" groups=["projectile"]]
 collision_layer = 4
@@ -16,3 +16,8 @@ texture = ExtResource("1_8x35t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_f0um8")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

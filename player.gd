@@ -15,6 +15,7 @@ signal jumped
 @onready var DEATH_SPEED = 800
 @onready var col_shape = $CollisionShape2D
 @onready var projectile = preload("res://projectile.tscn")
+@onready var death_timer = $DeathTimer
 
 const DEATH_HEIGHT = 500
 
@@ -68,6 +69,7 @@ func die():
 	alive = false
 	if !fall_audio.playing:
 		fall_audio.play()
+	death_timer.start()
 		
 func shoot():
 	var bullet = projectile.instantiate()
@@ -77,3 +79,7 @@ func shoot():
 	shoot_audio.play()
 
 	
+
+# Reload game on death timeout
+func _on_death_timer_timeout():
+	get_tree().reload_current_scene()
