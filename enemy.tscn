@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dfcsca15tc0qq"]
+[gd_scene load_steps=13 format=3 uid="uid://dfcsca15tc0qq"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_3j5c2"]
 [ext_resource type="Texture2D" uid="uid://dh32rsvy0bbgc" path="res://resources/Mobile - Doodle Jump - General Sprites/enemy1.png" id="1_jauwr"]
 [ext_resource type="AudioStream" uid="uid://bhe88ivj88pg2" path="res://resources/Doodle Jump SFX/monster-crash.mp3" id="3_y268s"]
+[ext_resource type="AudioStream" uid="uid://bdhqceri3v80a" path="res://resources/Doodle Jump SFX/monsterpogodak.mp3" id="4_fw7f5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m6au"]
 atlas = ExtResource("1_jauwr")
@@ -47,25 +48,21 @@ animations = [{
 "speed": 30.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s88wm"]
-size = Vector2(145, 61.75)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xm7jg"]
 size = Vector2(145, 20)
 
-[node name="Enemy" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubp1j"]
+size = Vector2(148, 54)
+
+[node name="Enemy" type="Area2D" groups=["enemy"]]
 collision_layer = 2
-collision_mask = 5
+collision_mask = 17
 script = ExtResource("1_3j5c2")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kh67v")
 autoplay = "default"
 frame_progress = 0.776593
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 5.875)
-shape = SubResource("RectangleShape2D_s88wm")
 
 [node name="MonHitAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_y268s")
@@ -73,9 +70,21 @@ stream = ExtResource("3_y268s")
 [node name="EnemyJump" type="StaticBody2D" parent="."]
 editor_description = "Allows player to jump on enemy head
 "
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyJump"]
 position = Vector2(2.5, -36)
 shape = SubResource("RectangleShape2D_xm7jg")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 8)
+shape = SubResource("RectangleShape2D_ubp1j")
+debug_color = Color(0.901772, 0.273415, 0.381461, 0.42)
+
+[node name="DieAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_fw7f5")
+
+[node name="DeathTimer" type="Timer" parent="."]
+
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

@@ -1,16 +1,21 @@
-extends StaticBody2D
+extends Area2D
+
 @onready var timer = $Timer
 
-const SHOOT_SPEED = 30
-# Called when the node enters the scene tree for the first time.
+const SHOOT_SPEED = 20
+
 func _ready():
 	timer.start()
-	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Move bullet
 func _process(delta):
 	position.y -= SHOOT_SPEED
- 
+
 func _on_timer_timeout():
-	print("done")
 	self.queue_free()
+
+
+func _on_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	if area.is_in_group("enemy"):
+		self.queue_free()
+		area.die()

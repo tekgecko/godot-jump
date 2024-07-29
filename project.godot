@@ -43,6 +43,8 @@ shoot={
 
 [layer_names]
 
-2d_physics/layer_1="safe"
-2d_physics/layer_2="deadly"
-2d_physics/layer_3="weapon"
+2d_physics/layer_1="player"
+2d_physics/layer_2="enemy"
+2d_physics/layer_3="jumpable"
+2d_physics/layer_4="hazzard"
+2d_physics/layer_5="projectile"
