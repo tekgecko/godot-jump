@@ -46,6 +46,7 @@ func jump():
 	motion.y += jump_height
 	sprite.play("jump")
 	jump_audio.play()
+	emit_signal("jumped")
 	
 func controls():
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right"):

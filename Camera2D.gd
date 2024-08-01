@@ -5,7 +5,12 @@ const CAMERA_OFFSET = 400
 
 func _process(delta):
 	# TODO: Get the players last frame and move back
-	offset.y = player.position.y + CAMERA_OFFSET
-
+	var player_pos = round(abs(player.position.y))/100
+	
 func _on_player_jumped():
 	var player_pos = round(abs(player.position.y))/100
+	# TODO: Tween animation here
+		
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "offset", Vector2(0, player.position.y + CAMERA_OFFSET), 2)
+	
