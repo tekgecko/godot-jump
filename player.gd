@@ -36,9 +36,10 @@ func _process(delta):
 	elif !alive:
 		set_velocity(Vector2(0,2000))
 		col_shape.disabled = true
-
+	
 func check_height():
-	if position.y <= DEATH_HEIGHT:
+	if Vector2i(position) > get_tree().get_root().size:
+		print("out of bounds")
 		die()
 
 func jump():
@@ -62,7 +63,6 @@ func controls():
 	if Input.is_action_just_released("shoot"):
 		pass
 	
-
 func apply_gravity():
 	motion.y += GRAVITY
 
@@ -78,9 +78,12 @@ func shoot():
 	bullet.position = position
 	sprite.play("shoot")
 	shoot_audio.play()
-
 	
-
 # Reload game on death timeout
 func _on_death_timer_timeout():
 	get_tree().reload_current_scene()
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	print("Exited")
+	die()

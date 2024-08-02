@@ -114,6 +114,15 @@ script = ExtResource("3_es8gp")
 player_path = NodePath("../Player")
 
 [node name="Enemy4" parent="." instance=ExtResource("4_gi8id")]
+position = Vector2(122, -1278)
+
+[node name="Enemy4" parent="Enemy4" instance=ExtResource("4_gi8id")]
+position = Vector2(122, -1200)
+
+[node name="Enemy5" parent="." instance=ExtResource("4_gi8id")]
+position = Vector2(122, -1278)
+
+[node name="Enemy4" parent="Enemy5" instance=ExtResource("4_gi8id")]
 position = Vector2(122, -1200)
 
 [node name="UI" type="CanvasLayer" parent="."]
