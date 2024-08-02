@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfcsca15tc0qq"]
+[gd_scene load_steps=14 format=3 uid="uid://dfcsca15tc0qq"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_3j5c2"]
 [ext_resource type="Texture2D" uid="uid://dh32rsvy0bbgc" path="res://resources/Mobile - Doodle Jump - General Sprites/enemy1.png" id="1_jauwr"]
 [ext_resource type="AudioStream" uid="uid://bhe88ivj88pg2" path="res://resources/Doodle Jump SFX/monster-crash.mp3" id="3_y268s"]
 [ext_resource type="AudioStream" uid="uid://bdhqceri3v80a" path="res://resources/Doodle Jump SFX/monsterpogodak.mp3" id="4_fw7f5"]
+[ext_resource type="AudioStream" uid="uid://c182ftcevngcs" path="res://resources/Doodle Jump SFX/jumponmonster.mp3" id="5_1h1ci"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3m6au"]
 atlas = ExtResource("1_jauwr")
@@ -85,6 +86,9 @@ debug_color = Color(0.901772, 0.273415, 0.381461, 0.42)
 stream = ExtResource("4_fw7f5")
 
 [node name="DeathTimer" type="Timer" parent="."]
+
+[node name="JumpAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1h1ci")
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

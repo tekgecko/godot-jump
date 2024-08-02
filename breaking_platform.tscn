@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2fxcti51ehbg"]
+
+[ext_resource type="Script" path="res://breaking_platform.gd" id="1_d2kn6"]
+[ext_resource type="Texture2D" uid="uid://cdudpa24ble65" path="res://resources/Mobile - Doodle Jump - General Sprites/plank_break.png" id="1_duxw0"]
+[ext_resource type="AudioStream" uid="uid://bxjsycff6oe8t" path="res://resources/Doodle Jump SFX/lomise.mp3" id="2_366y6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhdin"]
+atlas = ExtResource("1_duxw0")
+region = Rect2(0, 0, 129, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qasfj"]
+atlas = ExtResource("1_duxw0")
+region = Rect2(129, 0, 129, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmls0"]
+atlas = ExtResource("1_duxw0")
+region = Rect2(258, 0, 129, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1q7g"]
+atlas = ExtResource("1_duxw0")
+region = Rect2(387, 0, 129, 77)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2uiut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhdin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qasfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmls0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1q7g")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3qwu"]
+size = Vector2(120, 33)
+
+[node name="BreakingPlatform" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_d2kn6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2uiut")
+
+[node name="BreakAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_366y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15.5)
+shape = SubResource("RectangleShape2D_l3qwu")
+one_way_collision_margin = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
