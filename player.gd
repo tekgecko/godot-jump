@@ -5,6 +5,7 @@ signal jumped
 @onready var GRAVITY = 50
 @onready var UP = Vector2.UP
 @onready var jump_height = -2000
+@onready var spring_height = jump_height * 2
 @onready var motion = Vector2(0,0)
 @onready var SPEED = 500
 @onready var sprite = $AnimatedSprite2D
@@ -29,7 +30,7 @@ func _process(delta):
 	#check_height()
 	if alive:
 		if is_on_floor():
-			jump()
+			jump(jump_height)
 		controls()
 		set_velocity(motion)
 		apply_gravity()
@@ -42,9 +43,9 @@ func check_height():
 		print("out of bounds")
 		die()
 
-func jump():
+func jump(height):
 	motion.y = GRAVITY
-	motion.y += jump_height
+	motion.y += height
 	sprite.play("jump")
 	jump_audio.play()
 	emit_signal("jumped")
@@ -87,3 +88,7 @@ func _on_death_timer_timeout():
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	print("Exited")
 	die()
+
+
+func _on_spring_spring_hit():
+	jump(spring_height)
