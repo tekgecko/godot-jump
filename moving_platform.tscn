@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0a8kj4nb0nfb"]
+
+[ext_resource type="Texture2D" uid="uid://dbkeb7svo6jy2" path="res://resources/Mobile - Doodle Jump - General Sprites/moving_platform.png" id="1_2upg7"]
+[ext_resource type="Script" path="res://moving_platform.gd" id="1_cmuxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyixx"]
+size = Vector2(112, 28)
+
+[node name="MovingPlatform" type="StaticBody2D"]
+position = Vector2(-203.951, 0)
+script = ExtResource("1_cmuxv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2upg7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jyixx")

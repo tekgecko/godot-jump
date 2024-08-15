@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c602im1gi0puu"]
+[gd_scene load_steps=18 format=3 uid="uid://c602im1gi0puu"]
 
 [ext_resource type="Texture2D" uid="uid://dlujjy3truue7" path="res://resources/Mobile - Doodle Jump - General Sprites/game-tiles@2x.png" id="1_ofvrg"]
 [ext_resource type="Script" path="res://game.gd" id="1_q1dba"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://UI.gd" id="5_h2p70"]
 [ext_resource type="PackedScene" uid="uid://bpwe5bpoaiy14" path="res://spring.tscn" id="6_gg8hd"]
 [ext_resource type="PackedScene" uid="uid://c2fxcti51ehbg" path="res://breaking_platform.tscn" id="8_7cxug"]
+[ext_resource type="PackedScene" uid="uid://d0a8kj4nb0nfb" path="res://moving_platform.tscn" id="10_ocv6t"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_nn8x3"]
 tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 1, 65536, 0, 65537, 65536, 1, 2, 131072, 0, 65538, 131072, 1, 3, 196608, 0, 65539, 196608, 1, 4, 262144, 0, 65540, 262144, 1, 5, 327680, 0, 65541, 327680, 1, 6, 393216, 0, 65542, 393216, 1, 7, 458752, 0, 65543, 458752, 1)
@@ -185,7 +186,10 @@ unique_name_in_owner = true
 position = Vector2(316, -668)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(328, -650.17)
+zoom = Vector2(0.7, 0.7)
+position_smoothing_enabled = true
 script = ExtResource("3_es8gp")
 player_path = NodePath("../Player")
 
@@ -242,6 +246,17 @@ position = Vector2(199, -3082)
 
 [node name="BreakingPlatform8" parent="BreakingPlatforms" instance=ExtResource("8_7cxug")]
 position = Vector2(195, -3228)
+
+[node name="MovingPlatforms" type="Node" parent="."]
+
+[node name="MovingPlatform" parent="MovingPlatforms" instance=ExtResource("10_ocv6t")]
+position = Vector2(101.049, -1181)
+
+[node name="MovingPlatform2" parent="MovingPlatforms" instance=ExtResource("10_ocv6t")]
+position = Vector2(456, -1553)
+
+[node name="MovingPlatform3" parent="MovingPlatforms" instance=ExtResource("10_ocv6t")]
+position = Vector2(432, -1978)
 
 [connection signal="jumped" from="Player" to="Camera2D" method="_on_player_jumped"]
 [connection signal="spring_hit" from="Springs/Spring2" to="Player" method="_on_spring_spring_hit"]
