@@ -15,4 +15,3 @@ func move_cam():
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "offset", tween_to, move_time)
 	tween.EASE_IN_OUT
-

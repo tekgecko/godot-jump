@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d0a8kj4nb0nfb"]
 
 [ext_resource type="Texture2D" uid="uid://dbkeb7svo6jy2" path="res://resources/Mobile - Doodle Jump - General Sprites/moving_platform.png" id="1_2upg7"]
-[ext_resource type="Script" path="res://moving_platform.gd" id="1_cmuxv"]
+[ext_resource type="Script" uid="uid://ddxs1pgpe0r4i" path="res://moving_platform.gd" id="1_cmuxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyixx"]
 size = Vector2(112, 28)

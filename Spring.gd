@@ -21,5 +21,5 @@ func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index)
 	if !sprung:
 		spring_audio.play()
 		spring.play("default")
-		emit_signal("spring_hit")
+		emit_signal("spring_hit", get_process_delta_time())
 		

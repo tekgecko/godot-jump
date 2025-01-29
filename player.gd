@@ -2,10 +2,11 @@ extends CharacterBody2D
 
 signal jumped
 
-@onready var GRAVITY = 50
+@onready var delta
+@onready var GRAVITY = 40
 @onready var UP = Vector2.UP
-@onready var jump_height = -2000
-@onready var spring_height = jump_height * 2
+@onready var jump_height = -20
+@onready var spring_height = jump_height * 1.5
 @onready var motion = Vector2(0,0)
 @onready var SPEED = 500
 @onready var sprite = $AnimatedSprite2D
@@ -13,7 +14,6 @@ signal jumped
 @onready var fall_audio = $FallAudio
 @onready var shoot_audio = $ShootAudio
 @onready var alive = true
-@onready var DEATH_SPEED = 800
 @onready var col_shape = $CollisionShape2D
 @onready var projectile = preload("res://projectile.tscn")
 @onready var death_timer = $DeathTimer
@@ -30,7 +30,7 @@ func _process(delta):
 	#check_height()
 	if alive:
 		if is_on_floor():
-			jump(jump_height)
+			jump(jump_height,delta)
 		controls()
 		set_velocity(motion)
 		apply_gravity()
@@ -43,9 +43,9 @@ func check_height():
 		print("out of bounds")
 		die()
 
-func jump(height):
-	motion.y = GRAVITY
-	motion.y += height
+func jump(height, delta):
+	motion.y = GRAVITY * delta
+	motion.y += height / delta
 	sprite.play("jump")
 	jump_audio.play()
 	emit_signal("jumped")
@@ -63,7 +63,6 @@ func controls():
 		shoot()
 	if Input.is_action_just_released("shoot"):
 		pass
-	
 func apply_gravity():
 	motion.y += GRAVITY
 
@@ -75,7 +74,7 @@ func die():
 		
 func shoot():
 	var bullet = projectile.instantiate()
-	get_tree().root.get_child(0).add_child(bullet)
+	get_tree().root.add_child(bullet)
 	bullet.position = position
 	sprite.play("shoot")
 	shoot_audio.play()
@@ -89,6 +88,5 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	print("Exited")
 	die()
 
-
-func _on_spring_spring_hit():
-	jump(spring_height)
+func _on_spring_spring_hit(delta):
+	jump(spring_height, delta)

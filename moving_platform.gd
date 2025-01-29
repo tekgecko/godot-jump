@@ -9,15 +9,19 @@ extends StaticBody2D
 @onready var extent_right = Vector2(camera.position.x + (screen_width / 2),position.y)
 
 func _ready():
-	
 	# Sets a random start pos
+	var tween = create_tween()
 	var start = (randi_range(0,1))
 	if start == 0:
 		position.x = extent_right.x
-		var tween = create_tween().tween_property(self, "position", extent_left, movement_speed)
+		tween.tween_property(self, "position", extent_left, movement_speed)
+		tween.tween_property(self, "position", extent_right, movement_speed)
+		tween.set_loops(0)
 	else:
 		position.x = extent_left.x
-		var tween = create_tween().tween_property(self, "position", extent_right, movement_speed)
-
+		tween.tween_property(self, "position", extent_right, movement_speed)
+		tween.tween_property(self, "position", extent_left, movement_speed)
+		tween.set_loops(0)
+		
 func _process(delta):
 	pass
